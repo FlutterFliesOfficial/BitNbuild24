@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstevie/screens/LoginPage.dart';
 
 class OnboardingScreen extends StatelessWidget {
   @override
@@ -26,6 +27,10 @@ class OnboardingScreen extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 // Handle login button press
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
               },
               child: Text('Login'),
             ),
