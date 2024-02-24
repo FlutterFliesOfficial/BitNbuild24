@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:hotstevie/options/firestore.dart';
 import 'package:hotstevie/screens/LoginPage.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -52,13 +54,17 @@ class OnboardingScreen extends StatelessWidget {
               TextButton(
                 onPressed: () {
                   // Handle signup button press
+                  FirebaseStorageService().addUser({
+                    'name': 'Stevie',
+                    'email': 'email@mail,co',
+                },);
                 },
                 style: TextButton.styleFrom(
                   primary:
                       Colors.green[700], // Olive green color for text button
                 ),
                 child: Text(
-                  'Sign Up',
+                  'add to db',
                   style: TextStyle(fontSize: 18),
                 ),
               ),

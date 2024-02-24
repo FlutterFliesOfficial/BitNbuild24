@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotstevie/screens/AddNewObj.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -11,31 +12,41 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Username',
               ),
             ),
-            SizedBox(height: 16),
-            TextField(
+            const SizedBox(height: 16),
+            const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 // Perform login with username and password
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
                 // Perform Google login
               },
-              child: Text('Login with Google'),
+              child: const Text('Login with Google'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // NAVIGATE TO OBJ
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddNewObjScreen()),
+                );
+              },
+              child: const Text('TO ADD OBJ'),
             ),
           ],
         ),
