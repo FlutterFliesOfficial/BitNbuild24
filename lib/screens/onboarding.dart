@@ -5,43 +5,65 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Welcome to MyApp',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Welcome to MyApp',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black, // Text color is black
+                ),
               ),
-            ),
-            SizedBox(height: 16),
-            Image.asset(
-              'assets/images/onboarding_image.png',
-              width: 200,
-              height: 200,
-            ),
-            SizedBox(height: 16),
-            ElevatedButton(
-              onPressed: () {
-                // Handle login button press
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
-                );
-              },
-              child: Text('Login'),
-            ),
-            SizedBox(height: 8),
-            ElevatedButton(
-              onPressed: () {
-                // Handle signup button press
-              },
-              child: Text('Sign Up'),
-            ),
-          ],
+              SizedBox(height: 32),
+              Image.asset(
+                'assets/log.jpg',
+                width: 200,
+                height: 200,
+              ),
+              SizedBox(height: 32),
+              ElevatedButton(
+                onPressed: () {
+                  // Handle login button press
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.green[700], // Olive green color for button
+                  padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                child: Text(
+                  'Login',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              SizedBox(height: 16),
+              TextButton(
+                onPressed: () {
+                  // Handle signup button press
+                },
+                style: TextButton.styleFrom(
+                  primary:
+                      Colors.green[700], // Olive green color for text button
+                ),
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
