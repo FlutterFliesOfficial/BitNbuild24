@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'package:hotstevie/screens/LoginPage.dart';
 import 'package:hotstevie/screens/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
 }
+
 // implement onboarding screen
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
