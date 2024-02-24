@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstevie/options/firestore.dart';
+import 'package:hotstevie/screens/GetItem.dart';
 
 class AddNewObjScreen extends StatefulWidget {
   @override
@@ -117,7 +118,12 @@ class _AddNewObjScreenState extends State<AddNewObjScreen> {
                 child: Text('Add'),
               ),
               ElevatedButton(
-                onPressed: _printObjs,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DataDisplayPage()),
+                  );
+                },
                 child: Text('get objs'),
               ),
             ],
