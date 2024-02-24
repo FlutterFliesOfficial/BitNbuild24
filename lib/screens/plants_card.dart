@@ -6,46 +6,74 @@ class PlantsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      decoration: BoxDecoration(
-        color: Colors.brown.shade700,
-        borderRadius: const BorderRadius.only(topLeft: Radius.circular(45)),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(height: 40),
-          Text(
-            "Plants and trees",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 17,
-              fontWeight: FontWeight.w600,
+    return GestureDetector(
+      onTap: () {
+        // Add your desired function or navigation logic here
+        print('PlantsCard tapped!');
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        decoration: BoxDecoration(
+          color: Colors.brown.shade700,
+          borderRadius: const BorderRadius.only(topLeft: Radius.circular(45)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 40),
+            Row(
+              children: [
+                Image.asset(
+                  'assets/plant.jpg', // Change to your asset path
+                  height: 100,
+                ),
+                SizedBox(width: 16), // Adjust spacing between image and text
+                Text(
+                  "Product Name", // Replace with actual product name
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CustomPlantsColumn(
-                color: Colors.green,
-                figures: '3021',
-                headings: 'In Growing',
-                icon: Icons.arrow_drop_down,
+            SizedBox(
+                height: 20), // Add space between product name and other widgets
+            Text(
+              "Plants and trees",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
               ),
-              CustomPlantsColumn(
-                color: Colors.brown,
-                figures: '131',
-                headings: 'Custom by Man',
-                icon: Icons.arrow_drop_up,
-              ),
-              Image.asset(
-                'assets/plant.jpg',
-                height: 100,
-              )
-            ],
-          )
-        ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomPlantsColumn(
+                  color: Colors.green,
+                  figures: '3021',
+                  headings: 'In Growing',
+                  icon: Icons.arrow_drop_down,
+                ),
+                CustomPlantsColumn(
+                  color: Colors.brown,
+                  figures: '131',
+                  headings: 'Custom by Man',
+                  icon: Icons.arrow_drop_up,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    // Add your add to cart logic here
+                    print('Add to Cart pressed!');
+                  },
+                  child: Text('Add to Cart'),
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
