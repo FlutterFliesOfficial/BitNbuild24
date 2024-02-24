@@ -8,63 +8,63 @@ import 'package:hotstevie/screens/seed_card.dart';
 class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Container(
-          color: Colors.white,
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 30),
-              Text(
-                "Hello, Angel",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 34,
-                  fontWeight: FontWeight.w600,
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 30),
+                Text(
+                  "Hello, Angel",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 34,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => AddNewObjScreen()),
-                  );
-                  // Handle button press
-                },
-                child: Text('Add item'),
-              ),
-              Text(
-                "Balance your world",
-                style: TextStyle(color: Colors.white),
-              ),
-              SizedBox(height: 40),
-              CustomDropDown(),
-            ],
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => AddNewObjScreen()),
+                    );
+                    // Handle button press
+                  },
+                  child: Text('Add item'),
+                ),
+                Text(
+                  "Balance your world",
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(height: 40),
+                CustomDropDown(),
+              ],
+            ),
           ),
-        ),
-        Positioned(
-          top: 250,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          child: PlantsCard(),
-        ),
-        Positioned(
-          top: 410,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          child: SeedCard(),
-        ),
-        Positioned(
-          bottom: 0,
-          right: 0,
-          left: 0,
-          child: SizedBox(height: 110, child: LineChart(mainData())),
-        ),
-      ],
+          SizedBox(height: 20), // Added space for better scrolling
+          PlantsCard(),
+          SizedBox(height: 20), // Added space for better scrolling
+          SeedCard(),
+          SizedBox(height: 20),
+          SeedCard(),
+          SizedBox(height: 20),
+          SeedCard(),
+          SizedBox(height: 20), // Added space for better scrolling
+          SizedBox(
+            height: 250,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: LineChart(mainData()),
+            ),
+          ),
+          SizedBox(height: 20), // Added space for better scrolling
+        ],
+      ),
     );
   }
 
