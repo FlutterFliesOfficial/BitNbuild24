@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
             backgroundColor: Colors.white,
             child: Icon(
               Icons.person,
-              color: Colors.brown,
+              color: Color.fromARGB(255, 69, 23, 128),
             ),
           ),
           SizedBox(width: 20)

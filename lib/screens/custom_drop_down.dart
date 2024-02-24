@@ -9,10 +9,10 @@ class CustomDropDown extends StatefulWidget {
 
 class _CustomDropDownState extends State<CustomDropDown> {
   final List<String> items = [
-    'California - USA',
-    'New York - USA',
-    'Washington - USA',
-    'Brooklyn - USA',
+    // 'California - USA',
+    // 'New York - USA',
+    // 'Washington - USA',
+    // 'Brooklyn - USA',
   ];
   String? selectedValue;
 
@@ -20,17 +20,17 @@ class _CustomDropDownState extends State<CustomDropDown> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.brown.shade900,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(5),
       ),
       child: DropdownButtonHideUnderline(
         child: DropdownButton<String>(
           isExpanded: true,
           hint: const Text(
-            'Select Location',
+            '',
             style: TextStyle(
               fontSize: 14,
-              color: Colors.grey,
+              color: Colors.white,
             ),
           ),
           items: items
@@ -39,7 +39,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
                   value: item,
                   child: Text(
                     item,
-                    style: const TextStyle(fontSize: 14, color: Colors.white),
+                    style: const TextStyle(fontSize: 14, color: Colors.red),
                   ),
                 ),
               )

@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:hotstevie/screens/AddItem.dart';
 import 'package:hotstevie/screens/custom_drop_down.dart';
 import 'package:hotstevie/screens/plants_card.dart';
 import 'package:hotstevie/screens/seed_card.dart';
@@ -10,7 +11,7 @@ class HomeBody extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          color: Colors.brown.shade500,
+          color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,10 +20,20 @@ class HomeBody extends StatelessWidget {
               Text(
                 "Hello, Angel",
                 style: TextStyle(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 34,
                   fontWeight: FontWeight.w600,
                 ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AddNewObjScreen()),
+                  );
+                  // Handle button press
+                },
+                child: Text('Add item'),
               ),
               Text(
                 "Balance your world",
@@ -101,4 +112,4 @@ class HomeBody extends StatelessWidget {
   }
 }
 
-List<Color> gradientColors = [Colors.brown, Colors.brown];
+List<Color> gradientColors = [Colors.white, Colors.white];

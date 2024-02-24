@@ -40,7 +40,7 @@ class PlantsCard extends StatelessWidget {
                 icon: Icons.arrow_drop_up,
               ),
               Image.asset(
-                'assets/plant.png',
+                'assets/plant.jpg',
                 height: 100,
               )
             ],
