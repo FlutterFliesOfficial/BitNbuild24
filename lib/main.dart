@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:hotstevie/options/firebase_options.dart';
 // import 'package:hotstevie/screens/LoginPage.dart';
@@ -11,6 +12,7 @@ Future<void> main() async {
   );
   runApp(const MyApp());
 }
+
 // implement onboarding screen
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

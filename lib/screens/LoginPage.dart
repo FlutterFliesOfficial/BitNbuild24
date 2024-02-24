@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstevie/screens/AddNewObj.dart';
+import 'package:hotstevie/screens/home_view.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -27,6 +28,10 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeView()),
+                );
                 // Perform login with username and password
               },
               child: const Text('Login'),
