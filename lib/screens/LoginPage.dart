@@ -40,20 +40,6 @@ class LoginPage extends StatelessWidget {
                     fillColor: Colors.white,
                   ),
                 ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const TextField(
-              decoration: InputDecoration(
-                labelText: 'Username',
-              ),
-            ),
-            const SizedBox(height: 16),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                labelText: 'Password',
               ),
               SizedBox(height: 20), // Add spacing
               ElevatedButton(
