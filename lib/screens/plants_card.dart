@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotstevie/screens/custom_plants_column.dart';
+import 'package:hotstevie/screens/item_added_cart.dart';
 
 class PlantsCard extends StatelessWidget {
   const PlantsCard({Key? key}) : super(key: key);
@@ -65,8 +66,25 @@ class PlantsCard extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Add your add to cart logic here
-                    print('Add to Cart pressed!');
+                    // Create an instance of AddedItemCard with item details
+                    AddedItemCard addedItem = AddedItemCard(
+                      itemName:
+                          "Product Name", // Replace with actual product name
+                      itemImage:
+                          'assets/plant.jpg', // Replace with actual asset path
+                      price: 10.99, // Replace with actual price
+                      quantity: 1, // Replace with actual quantity
+                      description:
+                          "Description of the product", // Replace with actual description
+                    );
+
+                    // Show the AddedItemCard widget
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return addedItem;
+                      },
+                    );
                   },
                   child: Text('Add to Cart'),
                 ),

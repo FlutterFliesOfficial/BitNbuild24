@@ -4,6 +4,7 @@ import 'package:hotstevie/screens/AddItem.dart';
 import 'package:hotstevie/screens/custom_drop_down.dart';
 import 'package:hotstevie/screens/plants_card.dart';
 import 'package:hotstevie/screens/seed_card.dart';
+import 'package:hotstevie/screens/webview_page.dart';
 
 class HomeBody extends StatelessWidget {
   @override
@@ -36,6 +37,16 @@ class HomeBody extends StatelessWidget {
                     // Handle button press
                   },
                   child: Text('Add item'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage2()),
+                    );
+                    // Handle button press
+                  },
+                  child: Text('View Products'),
                 ),
                 Text(
                   "Balance your world",
