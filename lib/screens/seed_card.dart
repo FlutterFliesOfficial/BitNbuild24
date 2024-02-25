@@ -48,9 +48,9 @@ class SeedCard extends StatelessWidget {
 
                   // Extract data fields
                   String name = data['name'] ?? '';
-                  double price = data['price'] ?? 0.0;
-                  int quantity = data['quantity'] ?? 0;
-                  double weight = data['weight'] ?? 0.0;
+                  double price = (data['price'] ?? 0.0).toDouble();
+                  double quantity = (data['quantity'] ?? 0).toDouble();
+                  double weight = (data['weight'] ?? 0.0).toDouble();
 
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

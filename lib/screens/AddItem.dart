@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotstevie/options/firestore.dart';
 import 'package:hotstevie/screens/GetItem.dart';
+import 'package:hotstevie/screens/roughpage.dart';
 
 class AddNewObjScreen extends StatefulWidget {
   @override
@@ -126,6 +127,13 @@ class _AddNewObjScreenState extends State<AddNewObjScreen> {
                 },
                 child: Text('get objs'),
               ),
+              ElevatedButton(onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyWidget()),
+                );
+              }, child: const Text('  to rough page')
+              )
             ],
           ),
         ),
