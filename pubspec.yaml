@@ -42,6 +42,13 @@ dependencies:
   fl_pip: ^2.0.0
   fl_chart: ^0.66.2
   url_launcher: ^6.2.5
+  barcode_scanner: ^3.6.2
+  camera: ^0.10.5+9
+  barcode_scan2: ^4.3.0
+  image_picker: ^1.0.7
+  google_mlkit_barcode_scanning: ^0.10.0
+  google_ml_kit: ^0.16.3
+  path_provider: ^2.1.2
 
 dev_dependencies:
   flutter_test:

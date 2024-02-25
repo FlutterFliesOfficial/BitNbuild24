@@ -20,74 +20,88 @@ class AddedItemCard extends StatelessWidget {
     return Card(
       elevation: 4,
       margin: EdgeInsets.all(16),
-      child: Padding(
-        padding: EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              itemName,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 8),
-            Image.asset(
-              itemImage,
-              height: 100,
-              width: 100,
-              fit: BoxFit.cover,
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Price: \$${price.toStringAsFixed(2)}',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            Text(
-              'Quantity: $quantity',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              description,
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-            SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
+      child: Stack(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextButton(
-                  onPressed: () {
-                    // Close the card and go back to the previous screen
-                    Navigator.pop(context);
-                  },
-                  child: Text('Go Back'),
+                Text(
+                  itemName,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                SizedBox(width: 8), // Add some spacing between buttons
-                TextButton(
-                  onPressed: () {
-                    // Implement edit functionality
-                  },
-                  child: Text('Edit'),
+                SizedBox(height: 8),
+                Image.asset(
+                  itemImage,
+                  height: 100,
+                  width: 100,
+                  fit: BoxFit.cover,
                 ),
-                SizedBox(width: 8),
-                TextButton(
-                  onPressed: () {
-                    // Implement remove functionality
-                  },
-                  child: Text('Remove'),
+                SizedBox(height: 8),
+                Text(
+                  'Price: \$${price.toStringAsFixed(2)}',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  'Quantity: $quantity',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  description,
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        // Close the card and go back to the previous screen
+                        Navigator.pop(context);
+                      },
+                      child: Text('Go Back'),
+                    ),
+                    SizedBox(width: 8), // Add some spacing between buttons
+                    TextButton(
+                      onPressed: () {
+                        // Implement edit functionality
+                      },
+                      child: Text('Edit'),
+                    ),
+                    SizedBox(width: 8),
+                    TextButton(
+                      onPressed: () {
+                        // Implement remove functionality
+                      },
+                      child: Text('Remove'),
+                    ),
+                  ],
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+          Positioned(
+            bottom: 16,
+            right: 16,
+            child: IconButton(
+              onPressed: () {
+                // Implement card icon functionality
+              },
+              icon: Icon(Icons.credit_card),
+            ),
+          ),
+        ],
       ),
     );
   }
