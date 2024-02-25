@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotstevie/screens/custom_icons.dart';
 import 'package:hotstevie/screens/dashboard.dart';
 import 'package:hotstevie/screens/dashboardLanding.dart';
+import 'package:hotstevie/screens/displayQR.dart';
 import 'package:hotstevie/screens/home_body.dart';
 import 'package:hotstevie/screens/camera_screen.dart'; // Import the camera screen
 
@@ -30,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
               // Navigate to the camera screen
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CameraScreen()),
+                MaterialPageRoute(builder: (context) => const QRQR()),
               );
             },
             child: Icon(
