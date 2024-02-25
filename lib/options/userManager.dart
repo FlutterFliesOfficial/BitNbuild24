@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+// create update read list addInventoryToUser
+
 class UserManager {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 

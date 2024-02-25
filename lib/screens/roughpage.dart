@@ -7,14 +7,14 @@ import 'package:hotstevie/screens/dashboard.dart';
 class MyWidget extends StatelessWidget {
   MyWidget({Key? key}) : inventory = {}, super(key: key);
 
-void _createInventory() {
+void _createInventory() async {
 // String ownerID = 'ownerId2';
 String objectId1 = 'objectId5';
 String objectId2 = 'objectId6';
 String userId = 'someId'; // replace with your user ID
 // String inventoryId = 'yourInventoryId';
-Future<String> inventoryid = InventoryManager().createInventory(userId, [objectId1, objectId2]);
-UserManager().addInventoryToUser(userId, inventoryid as String);
+Future <String> inventoryid = InventoryManager().createInventory(userId, [objectId1, objectId2]);
+await UserManager().addInventoryToUser(userId, inventoryid as String);
 }
 
 Map<String, List<String>> inventory;
