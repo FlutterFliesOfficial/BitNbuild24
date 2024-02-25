@@ -15,7 +15,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
         leading: const Padding(
           padding: EdgeInsets.all(5),
@@ -26,7 +26,7 @@ class _HomeViewState extends State<HomeView> {
             backgroundColor: Colors.white,
             child: Icon(
               Icons.person,
-              color: Color.fromARGB(255, 69, 23, 128),
+              color: Colors.brown,
             ),
           ),
           SizedBox(width: 20)
