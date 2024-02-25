@@ -30,7 +30,7 @@ class PlantsCard extends StatelessWidget {
                 ),
                 SizedBox(width: 16), // Adjust spacing between image and text
                 Text(
-                  "Product Name", // Replace with actual product name
+                  "cabage", // Replace with actual product name
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 17,
@@ -54,14 +54,14 @@ class PlantsCard extends StatelessWidget {
               children: [
                 CustomPlantsColumn(
                   color: Colors.green,
-                  figures: '3021',
-                  headings: 'In Growing',
+                  figures: '300',
+                  headings: 'Price',
                   icon: Icons.arrow_drop_down,
                 ),
                 CustomPlantsColumn(
                   color: Colors.brown,
                   figures: '131',
-                  headings: 'Custom by Man',
+                  headings: 'quantity',
                   icon: Icons.arrow_drop_up,
                 ),
                 ElevatedButton(

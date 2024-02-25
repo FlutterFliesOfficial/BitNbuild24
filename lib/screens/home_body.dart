@@ -4,6 +4,7 @@ import 'package:hotstevie/screens/AddItem.dart';
 import 'package:hotstevie/screens/custom_drop_down.dart';
 import 'package:hotstevie/screens/plants_card.dart';
 import 'package:hotstevie/screens/seed_card.dart';
+import 'package:hotstevie/screens/tool_card.dart';
 import 'package:hotstevie/screens/webview_page.dart';
 
 class HomeBody extends StatelessWidget {
@@ -62,10 +63,9 @@ class HomeBody extends StatelessWidget {
           SizedBox(height: 20), // Added space for better scrolling
           SeedCard(),
           SizedBox(height: 20),
-          SeedCard(),
+          ToolCard(),
           SizedBox(height: 20),
-          SeedCard(),
-          SizedBox(height: 20), // Added space for better scrolling
+          // Added space for better scrolling
           SizedBox(
             height: 250,
             child: Padding(

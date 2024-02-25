@@ -75,14 +75,18 @@ class AddedItemCard extends StatelessWidget {
                     SizedBox(width: 8), // Add some spacing between buttons
                     TextButton(
                       onPressed: () {
-                        // Implement edit functionality
+                        // Handle edit button press
+                        print('Edit button pressed');
+                        // Implement editing logic here
                       },
                       child: Text('Edit'),
                     ),
                     SizedBox(width: 8),
                     TextButton(
                       onPressed: () {
-                        // Implement remove functionality
+                        // Handle remove button press
+                        print('Remove button pressed');
+                        // Implement removing logic here
                       },
                       child: Text('Remove'),
                     ),
