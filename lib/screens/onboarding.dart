@@ -16,7 +16,7 @@ class OnboardingScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Welcome to MyApp',
+                'Welcome to किसान सहाय्यक',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class OnboardingScreen extends StatelessWidget {
                       Colors.green[700], // Olive green color for text button
                 ),
                 child: Text(
-                  'add to db',
+                  'SIGN UP',
                   style: TextStyle(fontSize: 18),
                 ),
               ),

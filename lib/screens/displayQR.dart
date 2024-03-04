@@ -57,8 +57,13 @@ class _MyHomePage2State extends State<MyHomePage2> {
     return Scaffold(
       body: Column(
 
-children: [ SizedBox(
-  height: 200,
+children: [ 
+  
+  const SizedBox(
+  height: 70,
+),
+SizedBox(
+  height: 300,
 
 child: SfBarcodeGenerator(
 
@@ -79,9 +84,11 @@ symbology: QRCode(),
 ), // SfBarcodeGenerator
 
 ), // Container
-
+const SizedBox(
+  height: 50,
+),
 SizedBox(
-  height: 200,
+  height: 300,
 
 child: SfBarcodeGenerator(
 

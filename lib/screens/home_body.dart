@@ -21,7 +21,7 @@ class HomeBody extends StatelessWidget {
               children: [
                 SizedBox(height: 30),
                 Text(
-                  "Hello, Angel",
+                  "Namaste, Kisan",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 34,
